@@ -17,7 +17,7 @@ public class PersonCheckDao
             " and upper(p.sur_name)=upper(?)" +
             " and upper(p.given_name) = upper(?)" +
             " and upper(p.patronymic) = upper(?)" +
-            " and p.date_of_birth =?" +
+    //   " and p.date_of_birth =?" +
             " and a.street_code=?" +
             " and upper(a.building) =upper(?) ";
 
@@ -62,7 +62,7 @@ public class PersonCheckDao
           stmt.setString(++count, request.getSurName());
           stmt.setString(++count, request.getGivenName());
           stmt.setString(++count, request.getPatronymic());
-          stmt.setDate(++count, java.sql.Date.valueOf(request.getDateOfBirth()));
+        //  stmt.setDate(++count, java.sql.Date.valueOf(request.getDateOfBirth()));
           stmt.setInt(++count, request.getStreetCode());
           stmt.setString(++count, request.getBuilding());
           if(request.getExtension()!=null)

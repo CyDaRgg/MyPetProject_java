@@ -9,7 +9,7 @@ public class PersonRequest
     private String givenName;
     private String patronymic;
 
-    @XmlJavaTypeAdapter(value= LocalDateAdapter.class)
+     @XmlJavaTypeAdapter(value= LocalDateAdapter.class)
     private LocalDate dateOfBirth;
 
     private Integer streetCode;

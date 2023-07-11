@@ -12,4 +12,6 @@
             url="jdbc:postgresql://localhost/city_register"
             validationQuery="SELECT 1">
     </Resource>
+
+<!--    <WelcomeFile>index.html</WelcomeFile>-->
 </Context>

@@ -23,9 +23,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-
       <version>4.12</version>
-
       <scope>test</scope>
     </dependency>
 
@@ -36,10 +34,10 @@
     </dependency>
 
     <dependency>
-      <groupId>javax</groupId>             <!-- для сервлетов которые в javaEE-->
+      <groupId>javax</groupId>             <!-- для сервлетов которые в javaEE(web.CheckPersonServlet  javax.servlet)-->
       <artifactId>javaee-api</artifactId>
       <version>7.0</version>
-      <scope>provided</scope>
+      <scope>compile</scope>
     </dependency>
 
 
@@ -60,22 +58,22 @@
 
 
     <dependency>
-      <groupId>org.glassfish.jersey.containers</groupId>
+      <groupId>org.glassfish.jersey.containers</groupId>    <!-- для аннотаций Path GET POST-->
       <artifactId>jersey-container-servlet</artifactId>
       <version>${jersey.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.glassfish.jersey.inject</groupId>
+      <groupId>org.glassfish.jersey.inject</groupId>        <!-- для аннотации Singleton(управление жизненным циклом сервлета)-->
       <artifactId>jersey-hk2</artifactId>
       <version>${jersey.version}</version>
     </dependency>
 
     <dependency>
-      <groupId>org.glassfish.jersey.media</groupId>
+      <groupId>org.glassfish.jersey.media</groupId>        <!-- для аннотаций Consumes Produces-->
       <artifactId>jersey-media-moxy</artifactId>
       <version>${jersey.version}</version>
     </dependency>
-    <dependency>
+    <dependency>                                              <!-- для LocalDateAdapter-->
       <groupId>javax.xml.bind</groupId>
       <artifactId>jaxb-api</artifactId>
       <version>${jaxb.version}</version>

@@ -34,7 +34,7 @@
     </dependency>
 
     <dependency>
-      <groupId>javax</groupId>             <!-- для сервлетов которые в javaEE(web.CheckPersonServlet  javax.servlet)-->
+      <groupId>javax</groupId>             <!-- для сервлетов которые в javaEE(web.CheckPersonServlet  javax.servlet, содержит класс и аннотации (*)Java Servlet API (javax.servlet)(на веб сервере tomCat уже есть контейнер сервлетов, который реализует эту спецификацию);  (*)JAX-RS API (javax.ws.rs)(но для этого уже еужен фреймворк jersey)-->
       <artifactId>javaee-api</artifactId>
       <version>7.0</version>
       <scope>compile</scope>
@@ -58,12 +58,12 @@
 
 
     <dependency>
-      <groupId>org.glassfish.jersey.containers</groupId>    <!-- для аннотаций Path GET POST-->
+      <groupId>org.glassfish.jersey.containers</groupId>    <!-- для реализации аннотаций Path GET POST и вцелом для реализации спецификации JAX RS так как tomCat не реализует сам-->
       <artifactId>jersey-container-servlet</artifactId>
       <version>${jersey.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.glassfish.jersey.inject</groupId>        <!-- для аннотации Singleton(управление жизненным циклом сервлета)-->
+      <groupId>org.glassfish.jersey.inject</groupId>        <!-- для реализации аннотации Singleton(управление жизненным циклом сервлета)-->
       <artifactId>jersey-hk2</artifactId>
       <version>${jersey.version}</version>
     </dependency>

@@ -11,8 +11,9 @@ public class Starter
         ApplicationContext context = new ClassPathXmlApplicationContext(
                 new String[]{"springContext.xml"} // загрузка классов в память для дальнейшего использования(при повторном вызове этой функции бины пересоздадутся)
         );
-
-        MarriageController controller = context.getBean("controller", MarriageController.class);
+        
+        //        MarriageController controller = context.getBean(MarriageController.class);
+        MarriageController controller = context.getBean("controller", MarriageController.class); //'controller' чтобы если при вытаскивании бина потом мы указали бы дед.class , то именем конкретизировали бы нужный бин, который реализует нужный класс(если классов несколько, например еще MarriageController extends MarriageController)
         controller.findMarriageCertificate(new MarriageRequest());
     }
 }

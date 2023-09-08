@@ -37,7 +37,6 @@
       <groupId>javax</groupId>             <!-- для сервлетов которые в javaEE(web.CheckPersonServlet  javax.servlet, содержит класс и аннотации (*)Java Servlet API (javax.servlet)(на веб сервере tomCat уже есть контейнер сервлетов, который реализует эту спецификацию);  (*)JAX-RS API (javax.ws.rs)(но для этого уже еужен фреймворк jersey)-->
       <artifactId>javaee-api</artifactId>
       <version>7.0</version>
-      <scope>compile</scope>
     </dependency>
 
 
